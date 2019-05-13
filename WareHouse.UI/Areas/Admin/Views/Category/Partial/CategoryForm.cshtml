@@ -1,0 +1,24 @@
+﻿@model WareHouse.UI.Areas.Admin.Models.DTO.CategoryDTO
+
+<div class="box box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title">Add Category</h3>
+    </div>
+    <form action="/Admin/Category/AddCategory" method="post" role="form">
+        <div class="box-body">
+            <div class="form-group">
+                <label for="text">Category Name</label>
+                <input type="text" name="CategoryName" class="form-control" placeholder="Category Name">
+                @Html.ValidationMessageFor(x => x.CategoryName)
+            </div>
+            <div class="form-group">
+                <label for="text">Category Description</label>
+                <input type="text" name="CategoryDescription" class="form-control" placeholder="Category Description">
+                @Html.ValidationMessageFor(x => x.CategoryDescription)
+            </div>
+        </div>
+        <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
